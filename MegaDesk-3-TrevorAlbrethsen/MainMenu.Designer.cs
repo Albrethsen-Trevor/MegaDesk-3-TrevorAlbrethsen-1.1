@@ -28,49 +28,57 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.addNewQuote = new System.Windows.Forms.Button();
+            this.viewAllQuotesForm = new System.Windows.Forms.Button();
+            this.searchQuotesButton = new System.Windows.Forms.Button();
+            this.exitButton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
-            // button1
+            // addNewQuote
             // 
-            this.button1.Location = new System.Drawing.Point(35, 38);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(324, 86);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
-            this.button1.UseVisualStyleBackColor = true;
+            this.addNewQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addNewQuote.Location = new System.Drawing.Point(35, 38);
+            this.addNewQuote.Name = "addNewQuote";
+            this.addNewQuote.Size = new System.Drawing.Size(324, 86);
+            this.addNewQuote.TabIndex = 0;
+            this.addNewQuote.Text = "Add New Quote";
+            this.addNewQuote.UseVisualStyleBackColor = true;
+            this.addNewQuote.Click += new System.EventHandler(this.addNewQuote_Click);
             // 
-            // button2
+            // viewAllQuotesForm
             // 
-            this.button2.Location = new System.Drawing.Point(35, 144);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(324, 86);
-            this.button2.TabIndex = 1;
-            this.button2.Text = "button2";
-            this.button2.UseVisualStyleBackColor = true;
+            this.viewAllQuotesForm.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.viewAllQuotesForm.Location = new System.Drawing.Point(35, 144);
+            this.viewAllQuotesForm.Name = "viewAllQuotesForm";
+            this.viewAllQuotesForm.Size = new System.Drawing.Size(324, 86);
+            this.viewAllQuotesForm.TabIndex = 1;
+            this.viewAllQuotesForm.Text = "View Quotes";
+            this.viewAllQuotesForm.UseVisualStyleBackColor = true;
+            this.viewAllQuotesForm.Click += new System.EventHandler(this.viewAllQuotesForm_Click);
             // 
-            // button3
+            // searchQuotesButton
             // 
-            this.button3.Location = new System.Drawing.Point(35, 252);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(324, 86);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.searchQuotesButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.searchQuotesButton.Location = new System.Drawing.Point(35, 252);
+            this.searchQuotesButton.Name = "searchQuotesButton";
+            this.searchQuotesButton.Size = new System.Drawing.Size(324, 86);
+            this.searchQuotesButton.TabIndex = 2;
+            this.searchQuotesButton.Text = "Search Quotes";
+            this.searchQuotesButton.UseVisualStyleBackColor = true;
+            this.searchQuotesButton.Click += new System.EventHandler(this.searchQuotesButton_Click);
             // 
-            // button4
+            // exitButton
             // 
-            this.button4.Location = new System.Drawing.Point(35, 358);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(324, 86);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "button4";
-            this.button4.UseVisualStyleBackColor = true;
+            this.exitButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.exitButton.Location = new System.Drawing.Point(35, 358);
+            this.exitButton.Name = "exitButton";
+            this.exitButton.Size = new System.Drawing.Size(324, 86);
+            this.exitButton.TabIndex = 3;
+            this.exitButton.Text = "Exit";
+            this.exitButton.UseVisualStyleBackColor = true;
+            this.exitButton.Click += new System.EventHandler(this.exitButton_Click);
             // 
             // pictureBox1
             // 
@@ -88,10 +96,10 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(964, 831);
             this.Controls.Add(this.pictureBox1);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.exitButton);
+            this.Controls.Add(this.searchQuotesButton);
+            this.Controls.Add(this.viewAllQuotesForm);
+            this.Controls.Add(this.addNewQuote);
             this.Name = "MainMenu";
             this.Text = "MegaDesk";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -102,10 +110,10 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button addNewQuote;
+        private System.Windows.Forms.Button viewAllQuotesForm;
+        private System.Windows.Forms.Button searchQuotesButton;
+        private System.Windows.Forms.Button exitButton;
         private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

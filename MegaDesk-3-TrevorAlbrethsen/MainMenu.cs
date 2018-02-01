@@ -16,5 +16,34 @@ namespace MegaDesk_3_TrevorAlbrethsen
         {
             InitializeComponent();
         }
+
+        private void addNewQuote_Click(object sender, EventArgs e)
+        {
+            AddQuote addQuote = new AddQuote();
+            addQuote.Tag = this;
+            addQuote.Show(this);
+            Hide();
+        }
+
+        private void viewAllQuotesForm_Click(object sender, EventArgs e)
+        {
+            ViewAllQuotes viewAllQuotes = new ViewAllQuotes();
+            viewAllQuotes.Tag = this;
+            viewAllQuotes.Show(this);
+            Hide();
+        }
+
+        private void searchQuotesButton_Click(object sender, EventArgs e)
+        {
+            SearchQuotes searchQuotesForm = new SearchQuotes();
+            searchQuotesForm.Tag = this;
+            searchQuotesForm.Show(this);
+            Hide();
+        }
+
+        private void exitButton_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
