@@ -12,9 +12,25 @@ namespace MegaDesk_3_TrevorAlbrethsen
 {
     public partial class AddQuote : Form
     {
+        int minWidth = 24;
+        int maxWidth = 96;
+        int minDepth = 12;
+        int maxDepth = 48;
+        int minDrawer = 1;
+        int maxDrawer = 7;
+
         public AddQuote()
         {
             InitializeComponent();
+            this.saveQuoteButton.Enabled = false;
+        }
+
+        private void saveQuoteButton_Click(object sender, EventArgs e)
+        {
+            DeskQuote deskQuote = new DeskQuote();
+            deskQuote.saveQuote(this);
+            this.saveQuoteButton.Enabled = false;
+            MessageBox.Show("Quote has been saved.");
         }
 
         private void cancelQuoteButton_Click(object sender, EventArgs e)
@@ -24,18 +40,32 @@ namespace MegaDesk_3_TrevorAlbrethsen
             Close();
         }
 
-        private void widthValueBox_TextChanged(object sender, EventArgs e)
+        private void widthUpDown_ValueChanged(object sender, EventArgs e)
         {
-            int width = Convert.ToInt32(widthValueBox.Text);
-
-            if (width < 24 || width > 96) MessageBox.Show("Width must be between 24 and 96.", "Error Title", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            widthUpDown.Minimum = minWidth;
+            widthUpDown.Maximum = maxWidth;
         }
 
-        private void heightValueBox_TextChanged(object sender, EventArgs e)
+        private void depthUpDown_ValueChanged(object sender, EventArgs e)
         {
-            int height = Convert.ToInt32(heightValueBox.Text);
+            depthUpDown.Minimum = minDepth;
+            depthUpDown.Maximum = maxDepth;
+        }
 
-            if (height < 12 || height > 48) MessageBox.Show("Height must be between 12 and 48.", "Error Title", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+        private void drawersUpDown_ValueChanged(object sender, EventArgs e)
+        {
+            drawersUpDown.Minimum = minDrawer;
+            drawersUpDown.Maximum = maxDrawer;
+        }
+
+        private void surfMaterialBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void rushOrderOptBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
