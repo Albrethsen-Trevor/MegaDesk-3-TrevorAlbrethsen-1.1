@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MegaDesk_3_TrevorAlbrethsen
+namespace MegaDesk_3_TrevorAlbrethsen_1_1
 {
     class Desk
     {

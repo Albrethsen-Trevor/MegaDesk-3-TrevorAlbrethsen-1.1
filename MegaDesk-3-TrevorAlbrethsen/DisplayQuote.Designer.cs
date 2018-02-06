@@ -1,4 +1,4 @@
-﻿namespace MegaDesk_3_TrevorAlbrethsen
+﻿namespace MegaDesk_3_TrevorAlbrethsen_1_1
 {
     partial class DisplayQuote
     {

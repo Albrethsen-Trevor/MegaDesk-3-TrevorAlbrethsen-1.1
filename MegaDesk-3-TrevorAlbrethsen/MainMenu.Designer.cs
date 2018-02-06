@@ -1,4 +1,4 @@
-﻿namespace MegaDesk_3_TrevorAlbrethsen
+﻿namespace MegaDesk_3_TrevorAlbrethsen_1_1
 {
     partial class MainMenu
     {
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainMenu));
             this.addNewQuote = new System.Windows.Forms.Button();
             this.viewAllQuotesForm = new System.Windows.Forms.Button();
             this.searchQuotesButton = new System.Windows.Forms.Button();
@@ -83,7 +84,7 @@
             // pictureBox1
             // 
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.pictureBox1.Image = global::MegaDesk_3_TrevorAlbrethsen.Properties.Resources.d5652fa2_d396_447c_bf9b_8d8b5d6afa38_1_1a834a4a4594987e38001a76d5cb372c;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(411, 38);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(500, 500);
