@@ -43,6 +43,8 @@
             this.drawersUpDown = new System.Windows.Forms.NumericUpDown();
             this.surfMaterialBox = new System.Windows.Forms.ComboBox();
             this.rushOrderOptBox = new System.Windows.Forms.ComboBox();
+            this.temp_Price = new System.Windows.Forms.TextBox();
+            this.label8 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.widthUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.depthUpDown)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.drawersUpDown)).BeginInit();
@@ -147,29 +149,65 @@
             this.custNameBox.Name = "custNameBox";
             this.custNameBox.Size = new System.Drawing.Size(524, 38);
             this.custNameBox.TabIndex = 13;
+            this.custNameBox.TextChanged += new System.EventHandler(this.custNameBox_TextChanged);
             // 
             // widthUpDown
             // 
             this.widthUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.widthUpDown.Location = new System.Drawing.Point(355, 113);
+            this.widthUpDown.Maximum = new decimal(new int[] {
+            96,
+            0,
+            0,
+            0});
+            this.widthUpDown.Minimum = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
             this.widthUpDown.Name = "widthUpDown";
             this.widthUpDown.Size = new System.Drawing.Size(120, 38);
             this.widthUpDown.TabIndex = 14;
+            this.widthUpDown.Value = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
             this.widthUpDown.ValueChanged += new System.EventHandler(this.widthUpDown_ValueChanged);
             // 
             // depthUpDown
             // 
             this.depthUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.depthUpDown.Location = new System.Drawing.Point(835, 113);
+            this.depthUpDown.Maximum = new decimal(new int[] {
+            48,
+            0,
+            0,
+            0});
+            this.depthUpDown.Minimum = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
             this.depthUpDown.Name = "depthUpDown";
             this.depthUpDown.Size = new System.Drawing.Size(120, 38);
             this.depthUpDown.TabIndex = 15;
+            this.depthUpDown.Value = new decimal(new int[] {
+            12,
+            0,
+            0,
+            0});
             this.depthUpDown.ValueChanged += new System.EventHandler(this.depthUpDown_ValueChanged);
             // 
             // drawersUpDown
             // 
             this.drawersUpDown.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.drawersUpDown.Location = new System.Drawing.Point(355, 189);
+            this.drawersUpDown.Maximum = new decimal(new int[] {
+            7,
+            0,
+            0,
+            0});
             this.drawersUpDown.Name = "drawersUpDown";
             this.drawersUpDown.Size = new System.Drawing.Size(120, 38);
             this.drawersUpDown.TabIndex = 16;
@@ -186,12 +224,6 @@
             this.surfMaterialBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.surfMaterialBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.surfMaterialBox.FormattingEnabled = true;
-            this.surfMaterialBox.Items.AddRange(new object[] {
-            "Laminate",
-            "Oak",
-            "Rosewood",
-            "Veneer",
-            "Pine"});
             this.surfMaterialBox.Location = new System.Drawing.Point(355, 262);
             this.surfMaterialBox.Name = "surfMaterialBox";
             this.surfMaterialBox.Size = new System.Drawing.Size(377, 39);
@@ -208,20 +240,43 @@
             this.rushOrderOptBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rushOrderOptBox.FormattingEnabled = true;
             this.rushOrderOptBox.Items.AddRange(new object[] {
-            "3 Day Rush Order",
-            "5 Day Rush Order",
-            "7 Day Rush Order"});
+            "3 Days",
+            "5 Days",
+            "7 Days",
+            "Normal"});
             this.rushOrderOptBox.Location = new System.Drawing.Point(355, 336);
             this.rushOrderOptBox.Name = "rushOrderOptBox";
             this.rushOrderOptBox.Size = new System.Drawing.Size(377, 39);
             this.rushOrderOptBox.TabIndex = 18;
             this.rushOrderOptBox.SelectedIndexChanged += new System.EventHandler(this.rushOrderOptBox_SelectedIndexChanged);
             // 
+            // temp_Price
+            // 
+            this.temp_Price.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.temp_Price.Location = new System.Drawing.Point(355, 439);
+            this.temp_Price.Margin = new System.Windows.Forms.Padding(6);
+            this.temp_Price.Name = "temp_Price";
+            this.temp_Price.Size = new System.Drawing.Size(377, 50);
+            this.temp_Price.TabIndex = 19;
+            this.temp_Price.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(65, 451);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(144, 31);
+            this.label8.TabIndex = 20;
+            this.label8.Text = "Total Price";
+            // 
             // AddQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1042, 753);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.temp_Price);
             this.Controls.Add(this.rushOrderOptBox);
             this.Controls.Add(this.surfMaterialBox);
             this.Controls.Add(this.drawersUpDown);
@@ -239,6 +294,7 @@
             this.Controls.Add(this.cancelQuoteButton);
             this.Name = "AddQuote";
             this.Text = "AddQuote";
+            this.Load += new System.EventHandler(this.AddQuote_Load);
             ((System.ComponentModel.ISupportInitialize)(this.widthUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.depthUpDown)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.drawersUpDown)).EndInit();
@@ -264,5 +320,7 @@
         private System.Windows.Forms.NumericUpDown drawersUpDown;
         private System.Windows.Forms.ComboBox surfMaterialBox;
         private System.Windows.Forms.ComboBox rushOrderOptBox;
+        private System.Windows.Forms.TextBox temp_Price;
+        private System.Windows.Forms.Label label8;
     }
 }

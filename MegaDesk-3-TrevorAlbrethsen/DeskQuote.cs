@@ -1,4 +1,4 @@
-﻿using System;
+﻿ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,39 +6,29 @@ using System.Threading.Tasks;
 
 namespace MegaDesk_3_TrevorAlbrethsen_1_1
 {
-    class DeskQuote
+    public class DeskQuote
     {
-        private int rushDays;
-        public int getRushDays
+        public Desk Desk { get; set; }
+        public string CustomerName { get; set; }
+        public DateTime OrderDate { get; set; }
+        public int RushOrder { get; set; }
+        public int FinalPrice { get; set; }
+        public string CustomerPrice(decimal FinalPrice)
         {
-            get
-            {
-                return this.rushDays;
-            }
-            set
-            {
-                this.rushDays = value;
-            }
+            string CustomerPriceTotal;
+            //int dollars = FinalPrice / 100;
+            //int cents = FinalPrice % 100;
+            //CustomerPriceTotal = "$" + dollars.ToString() + "." + cents.ToString();
+
+            CustomerPriceTotal = FinalPrice.ToString("C");
+
+            return CustomerPriceTotal;
         }
 
-        private string customerName;
-        public string getCustomerName
-        {
-            get
-            {
-                return this.customerName;
-            }
-            set
-            {
-                this.customerName = value;
-            }
-        }
-
-        public void saveQuote(AddQuote addQuote)
-        {
-            Desk desk = new Desk();
-        }
-
-
+        const int Oak = 200;
+        const int Laminate = 100;
+        const int Pine = 50;
+        const int Rosewood = 300;
+        const int Veneer = 125;
     }
 }

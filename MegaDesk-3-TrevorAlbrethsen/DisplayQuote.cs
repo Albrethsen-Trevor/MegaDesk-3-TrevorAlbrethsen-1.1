@@ -16,5 +16,12 @@ namespace MegaDesk_3_TrevorAlbrethsen_1_1
         {
             InitializeComponent();
         }
+
+        private void cancelQuoteButton_Click(object sender, EventArgs e)
+        {
+            var mainMenu = (MainMenu)Tag;
+            mainMenu.Show();
+            Close();
+        }
     }
 }

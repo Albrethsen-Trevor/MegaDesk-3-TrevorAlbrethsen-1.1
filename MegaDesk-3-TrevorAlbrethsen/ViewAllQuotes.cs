@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,6 +23,24 @@ namespace MegaDesk_3_TrevorAlbrethsen_1_1
             var mainMenu = (MainMenu)Tag;
             mainMenu.Show();
             Close();
+        }
+
+        private void viewQuoteButton_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string[] lines = File.ReadAllLines(@"quotes.csv");
+
+                for (int i = 0; i < lines.Length; i++)
+                {
+                    string[] line = lines[i].Split(',');
+                    viewQuotes.Rows.Add(line);
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+            }
         }
     }
 }

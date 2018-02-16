@@ -28,11 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.cancelQuoteButton = new System.Windows.Forms.Button();
+            this.SuspendLayout();
+            // 
+            // cancelQuoteButton
+            // 
+            this.cancelQuoteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
+            this.cancelQuoteButton.Location = new System.Drawing.Point(559, 654);
+            this.cancelQuoteButton.Name = "cancelQuoteButton";
+            this.cancelQuoteButton.Size = new System.Drawing.Size(328, 90);
+            this.cancelQuoteButton.TabIndex = 1;
+            this.cancelQuoteButton.Text = "Cancel Quote";
+            this.cancelQuoteButton.UseVisualStyleBackColor = true;
+            this.cancelQuoteButton.Click += new System.EventHandler(this.cancelQuoteButton_Click);
+            // 
+            // DisplayQuote
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(986, 793);
+            this.Controls.Add(this.cancelQuoteButton);
+            this.Name = "DisplayQuote";
             this.Text = "DisplayQuote";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Button cancelQuoteButton;
     }
 }

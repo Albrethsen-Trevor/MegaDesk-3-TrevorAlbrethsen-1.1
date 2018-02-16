@@ -6,45 +6,21 @@ using System.Threading.Tasks;
 
 namespace MegaDesk_3_TrevorAlbrethsen_1_1
 {
-    class Desk
+    public class Desk
     {
-        private float width;
-        public float getWidth
-        {
-            get
-            {
-                return this.width;
-            }
-            set
-            {
-                this.width = value;
-            }
-        }
+        public int Width { get; set; }
+        public int Depth { get; set; }
+        public int WidthDepth { get; set; }
+        public int Drawers { get; set; }
+        public string SurfaceMaterials { get; set; }
 
-        private float depth;
-        public float getDepth
+        public enum Materials
         {
-            get
-            {
-                return this.depth;
-            }
-            set
-            {
-                this.depth = value;
-            }
-        }
-
-        private int drawers;
-        public int getDrawers
-        {
-            get
-            {
-                return this.drawers;
-            }
-            set
-            {
-                this.drawers = value;
-            }
+            Oak,
+            Laminate,
+            Pine,
+            Rosewood,
+            Veneer
         }
     }
 }
