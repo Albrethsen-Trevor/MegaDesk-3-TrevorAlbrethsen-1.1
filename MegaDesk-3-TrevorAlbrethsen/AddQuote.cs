@@ -46,6 +46,9 @@ namespace MegaDesk_3_TrevorAlbrethsen_1_1
             quote.Desk.Width = Convert.ToInt32(widthUpDown.Value);
             quote.Desk.Depth = Convert.ToInt32(depthUpDown.Value);
             quote.Desk.WidthDepth = (quote.Desk.Width * quote.Desk.Depth) * 1;
+            deskArea = (quote.Desk.WidthDepth);
+            quote.FinalPrice = totalPriceCalculated();
+            temp_Price.Text = quote.CustomerPrice(quote.FinalPrice);
         }
 
         private void saveQuoteButton_Click(object sender, EventArgs e)
