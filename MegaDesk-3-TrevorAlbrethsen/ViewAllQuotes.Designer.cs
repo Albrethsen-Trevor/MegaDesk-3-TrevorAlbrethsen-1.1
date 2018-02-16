@@ -81,7 +81,7 @@
             this.viewQuotes.Location = new System.Drawing.Point(15, 153);
             this.viewQuotes.Margin = new System.Windows.Forms.Padding(6);
             this.viewQuotes.Name = "viewQuotes";
-            this.viewQuotes.Size = new System.Drawing.Size(1492, 288);
+            this.viewQuotes.Size = new System.Drawing.Size(1414, 288);
             this.viewQuotes.TabIndex = 6;
             // 
             // DateOdered
@@ -123,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1530, 791);
+            this.ClientSize = new System.Drawing.Size(1700, 791);
             this.Controls.Add(this.viewQuotes);
             this.Controls.Add(this.viewQuoteButton);
             this.Controls.Add(this.cancelViewQuoteButton);

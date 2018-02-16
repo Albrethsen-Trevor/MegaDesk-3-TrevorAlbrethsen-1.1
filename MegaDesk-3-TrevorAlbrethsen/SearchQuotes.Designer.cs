@@ -83,7 +83,7 @@
             this.viewQuotes.Location = new System.Drawing.Point(15, 194);
             this.viewQuotes.Margin = new System.Windows.Forms.Padding(6);
             this.viewQuotes.Name = "viewQuotes";
-            this.viewQuotes.Size = new System.Drawing.Size(1492, 288);
+            this.viewQuotes.Size = new System.Drawing.Size(1402, 288);
             this.viewQuotes.TabIndex = 7;
             // 
             // DateOdered
@@ -153,7 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1522, 757);
+            this.ClientSize = new System.Drawing.Size(1598, 757);
             this.Controls.Add(this.MaterialSearch);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.viewQuotes);
