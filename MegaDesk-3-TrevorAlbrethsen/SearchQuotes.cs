@@ -54,10 +54,6 @@ namespace MegaDesk_3_TrevorAlbrethsen_1_1
                         viewQuotes.Rows.Add(columns);
                     }
                 }
-
-
-
-                
             }
             catch (Exception exception)
             {

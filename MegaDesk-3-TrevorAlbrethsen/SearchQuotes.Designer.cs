@@ -137,6 +137,7 @@
             this.MaterialSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MaterialSearch.FormattingEnabled = true;
             this.MaterialSearch.Items.AddRange(new object[] {
+            "All Materials",
             "Oak",
             "Laminate",
             "Pine",
@@ -147,6 +148,7 @@
             this.MaterialSearch.Name = "MaterialSearch";
             this.MaterialSearch.Size = new System.Drawing.Size(276, 39);
             this.MaterialSearch.TabIndex = 10;
+            this.MaterialSearch.Text = "All Materials";
             this.MaterialSearch.SelectedIndexChanged += new System.EventHandler(this.MaterialSearch_SelectedIndexChanged);
             // 
             // SearchQuotes
